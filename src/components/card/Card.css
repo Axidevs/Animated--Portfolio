@@ -1,0 +1,60 @@
+#card{
+
+height: 200px;
+width: 350px;
+background-color: rgb(20, 26, 31);
+position:relative;
+ filter: drop-shadow(2px 2px 15px aqua); 
+}
+
+.hovercard{
+
+height:200px;
+width: 300px;
+position: absolute;
+cursor: pointer;
+transition: all 0.5s;
+
+
+}
+
+.hovercard img{
+
+
+width:100%;
+height:100%;
+
+/* filter: drop-shadow(2px 2px 15px rgb(116, 201, 225)); */
+}
+
+
+#card h2 {
+  display: block;
+  position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50% , -50%);
+font-size: 2.5em;
+background: linear-gradient(to right, rgb(66, 180, 206), white);
+    display: inline-block;
+ background-clip: text;
+ color:transparent;
+
+
+}
+
+#card img {
+  display: none;
+}
+#card:hover h2{
+
+display:none;
+
+}
+#card:hover img{
+display: block;
+
+filter: drop-shadow(2px 2px 15px rgb(116, 201, 225))
+
+
+}

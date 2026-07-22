@@ -1,6 +1,9 @@
 import React from 'react'
 import './About.css'
-
+import Card from '../card/Card'
+import mern from "../../assets/mern.png"
+import react from "../../assets/reactdev.png"
+import java from "../../assets/java.png"
 
 const About = () => {
   return (
@@ -55,7 +58,9 @@ const About = () => {
 </div>
 
 <div className="rightabout">
-
+<Card title ="WEB DEVELOPER"  image ={mern}/>
+<Card title = "JAVA" image = {java}/>
+<Card title = "REACT DEVELOPER" image = {react}/>
 
 
 </div>
