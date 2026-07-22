@@ -4,13 +4,17 @@ height: 200px;
 width: 350px;
 background-color: rgb(20, 26, 31);
 position:relative;
- filter: drop-shadow(2px 2px 15px aqua); 
+ /* filter: drop-shadow(2px 2px 15px aqua);  */
+margin-top: 45px;
+ box-shadow: 0 0 15px aqua;
+flex-shrink:0;
+
 }
 
 .hovercard{
 
 height:200px;
-width: 300px;
+width: 350px;
 position: absolute;
 cursor: pointer;
 transition: all 0.5s;
