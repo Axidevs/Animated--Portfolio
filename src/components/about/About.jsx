@@ -1,11 +1,69 @@
-import React from 'react'
+import React from "react";
+import react from "../../assets/reactdev.png";
 import './About.css'
+import {useGSAP} from "@gsap/react"
+import gsap from "gsap"
 import Card from '../card/Card'
 import mern from "../../assets/mern.png"
-import react from "../../assets/reactdev.png"
-import java from "../../assets/java.png"
 
+import java from "../../assets/java.png"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 const About = () => {
+
+
+
+
+  useGSAP(() => {
+  gsap.from(".info1, .info2, .info3", {
+    x: -200,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.3,
+
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top 80%",
+
+      toggleActions: "play none none reset",
+    },
+  });
+
+// gsap.from(".card1, .card2, .card3", {
+//   x: 200,
+//   opacity: 0,
+//   duration: 1,
+//   stagger: 0.3,
+
+//   scrollTrigger: {
+//     trigger: ".rightabout",
+//     start: "top 80%",
+//   },
+// });
+
+
+gsap.from(".card1, .card2, .card3", {
+  x: -200,
+  opacity: 0,
+  duration: 3,
+  stagger: 0.3,
+
+scrollTrigger: {
+    trigger: ".rightabout",
+    start: "top 80%",
+   
+    scrub: true,
+  },
+
+
+});
+
+});
+
+
+
+
   return (
     <div id = 'about'>
       
@@ -58,9 +116,10 @@ const About = () => {
 </div>
 
 <div className="rightabout">
-<Card title ="WEB DEVELOPER"  image ={mern}/>
-<Card title = "JAVA" image = {java}/>
-<Card title = "REACT DEVELOPER" image = {react}/>
+  <div className="card1"><Card title ="WEB DEVELOPER"  image ={mern}/></div>
+<div className="card2"><Card title = "JAVA" image = {java}/></div>
+<div className="card3"><Card title = "REACT DEVELOPER" image = {react}/></div>
+
 
 
 </div>

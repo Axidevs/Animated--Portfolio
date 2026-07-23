@@ -3,9 +3,64 @@ import './Contact.css'
 
 import contact from "../../assets/contact.png"
 import Card from '../card/Card'
+import {useGSAP} from "@gsap/react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 
 
 const Contact = () => {
+
+useGSAP(()=>{
+  gsap.from(".leftcontact img", {
+
+x:-200,
+duration:1,
+
+opacity:0,
+// stagger: 1,
+
+scrollTrigger:{
+
+  trigger:"#contact",
+ start: "top 80%",
+ toggleActions: "play none none reset",
+//  scrub:true, toggleActions: "play none none reset",
+}
+
+
+})
+
+
+
+gsap.from(".rightcontact", {
+
+x:200,
+duration:1,
+
+opacity:0,
+// stagger: 1,
+
+scrollTrigger:{
+
+  trigger:"#contact",
+ start: "top 80%",
+ toggleActions: "play none none reset",
+}
+// scrub:true,
+
+
+})
+
+
+
+
+})
+
+
+
   return (
     <div id = "contact">
       

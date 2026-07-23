@@ -21,6 +21,8 @@ flex-wrap:wrap;
 
 }
 .heading{
+    width:100%;
+height: 300px;
 margin-top: 100px;
 font-size: 2rem;
 background: linear-gradient(to right,rgb(203, 21, 51) ,white);
